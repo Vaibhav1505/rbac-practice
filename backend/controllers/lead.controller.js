@@ -1,16 +1,16 @@
 const Lead = require('../models/lead.model');
 
 const createLead = async (req, res) => {
-    const { name, company, status } = req.body;
+    const { name, company, status,contact,description } = req.body;
 
-    if (!name || !company || !status) {
+    if (!name || !company || !contact) {
         return res.status(400).json({
             success: false,
             message: "Please provide all the required field"
         })
     }
 
-    const createdLeads = await Lead.create({name,company,status,createdBy:req.user.id});
+    const createdLeads = await Lead.create({ name, company, status,contact,description ,createdBy: req.user.id });
 
 
     res.status(201).json({

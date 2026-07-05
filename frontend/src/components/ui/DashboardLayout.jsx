@@ -1,5 +1,5 @@
 import AppSidebar from './AppSidebar';
-import { SidebarProvider, SidebarTrigger, SidebarInset } from './sidebar';
+import { SidebarProvider, SidebarInset } from './sidebar';
 import { Outlet } from 'react-router-dom';
 
 function DashboardLayout() {

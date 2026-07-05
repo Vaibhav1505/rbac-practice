@@ -8,6 +8,14 @@ const leadSchema = mongoose.Schema({
     company: {
         type: String,
     },
+    description: {
+        type: String,
+        default: ''
+    },
+    contact: {
+        type: String,
+        required: true
+    },
     status: {
         type: String,
         default: "new",
@@ -19,4 +27,4 @@ const leadSchema = mongoose.Schema({
     },
 },)
 
-module.exports=mongoose.model("Lead",leadSchema);
+module.exports = mongoose.model("Lead", leadSchema);

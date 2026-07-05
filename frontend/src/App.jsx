@@ -11,6 +11,7 @@ import Campaigns from './pages/Campaigns/Campaigns';
 import EmailTemplates from './pages/Email-Template/EmailTemplates';
 import Settings from './pages/Settings/Settings';
 import Users from './pages/Manage-Users/Users';
+import Profile from './pages/Profile';
 
 function App() {
   return (
@@ -19,7 +20,9 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/unauthorized" element={<UnauthorizedPage />} />
         <Route element={<ProtectedRoute />}>
+          
           <Route element={<DashboardLayout/>}>
+          <Route path='/profile' element={<Profile/>}/>
             <Route path="/" element={<Dashboard />} />
             <Route path="/leads" element={<Leads />} />
             <Route path="/deals" element={<Deals />} />

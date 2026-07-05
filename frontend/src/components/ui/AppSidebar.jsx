@@ -11,7 +11,7 @@ import {
 } from './sidebar';
 import UserAvatar from '../resuable-component/UserAvatar';
 import { Button } from './button';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import {
   Ad,
   Handshake,
@@ -104,7 +104,7 @@ function AppSidebar() {
 
       <SidebarFooter className="border-t px-3 py-4">
         <div className=" rounded-xl bg-gray-50">
-          <UserAvatar user={user} />
+          <Link to='/profile'><UserAvatar user={user} /></Link>
         </div>
 
         <Button
